@@ -38,7 +38,7 @@
                             <img src="{$BASE_PATH_IMG}/ssl/ssl-inactive-domain.png" data-toggle="tooltip" title="{lang key='sslState.sslInactiveService'}">
                         {/if}
                     </td>
-                    <td><strong>{$service.product}</strong>{if $service.domain}<br /><a href="http://{$service.domain}" target="_blank">{$service.domain}</a>{/if} - {if $service.dedicatedip}<br />{$service.dedicatedip}{/if}</td>   {* Just Mofidy this line with "{if $service.dedicatedip}<br />{$service.dedicatedip}{/if}" *}
+                    <td><strong>{$service.product}</strong>{if $service.domain}<br /><a href="http://{$service.domain}" target="_blank">{$service.domain}</a>{/if} - {if !empty($service.dedicatedip)}<br>{$service.dedicatedip}{/if}</td>   {* Just Mofidy this line with "{if !empty($service.dedicatedip)}<br>{$service.dedicatedip}{/if}" *}
                     <td class="text-center" data-order="{$service.amountnum}">{$service.amount}<br />{$service.billingcycle}</td>
                     <td class="text-center"><span class="hidden">{$service.normalisedNextDueDate}</span>{$service.nextduedate}</td>
                     <td class="text-center"><span class="label status status-{$service.status|strtolower}">{$service.statustext}</span></td>
